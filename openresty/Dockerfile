@@ -48,7 +48,6 @@ ARG _RESTY_CONFIG_DEPS="\
 RUN \
     apk add --no-cache --virtual .build-deps \
         build-base \
-        curl \
         gd-dev \
         geoip-dev \
         libxslt-dev \
@@ -60,13 +59,18 @@ RUN \
         zlib-dev \
         py2-pip \
     && apk add --no-cache \
+        bash \
+        curl \
         gd \
         geoip \
         git \
         libgcc \
         libxslt \
+        ncurses \
         openssl \
+        readline \
         unzip \
+        zip \
         zlib \
     && pip install hererocks \
     && hererocks --luajit=2.1 --luarocks=^ /usr \

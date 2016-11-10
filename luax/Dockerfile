@@ -8,7 +8,6 @@ ADD *.rockspec /lua/
 RUN \
     apk add --no-cache --virtual .build-deps \
         build-base \
-        curl \
         make \
         ncurses-dev \
         openssl-dev \
@@ -17,10 +16,15 @@ RUN \
         zlib-dev \
         py2-pip \
     && apk add --no-cache \
+        bash \
+        curl \
         git \
         libgcc \
+        ncurses \
         openssl \
+        readline \
         unzip \
+        zip \
         zlib \
     && pip install hererocks \
     && cd /lua \

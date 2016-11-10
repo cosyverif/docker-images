@@ -5,7 +5,6 @@ MAINTAINER Alban Linard <alban@linard.fr>
 RUN \
     apk add --no-cache --virtual .build-deps \
         build-base \
-        curl \
         make \
         openssl-dev \
         perl-dev \
@@ -13,10 +12,15 @@ RUN \
         zlib-dev \
         py2-pip \
     && apk add --no-cache \
+        bash \
+        curl \
         git \
         libgcc \
+        ncurses \
         openssl \
+        readline \
         unzip \
+        zip \
         zlib \
     && pip install hererocks \
     && hererocks --luajit=2.1 --luarocks=^ /usr \

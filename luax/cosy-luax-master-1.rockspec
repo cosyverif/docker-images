@@ -21,6 +21,7 @@ dependencies = {
   "luacheck",
   "luacov",
   "luacov-coveralls",
+  "luasec",
 }
 
 build = {
