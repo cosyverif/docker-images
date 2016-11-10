@@ -1,2 +1,4 @@
-# docker-images
-Dockerfiles for various containers
+# Base Dockerfiles for Cosy
+
+* `luajit`
+* `openresty`
