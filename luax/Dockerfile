@@ -3,6 +3,7 @@ MAINTAINER Alban Linard <alban@linard.fr>
 # MAINTAINER Evan Wies <evan@neomantra.net>
 
 ADD install    /lua/
+ADD versions   /lua/
 ADD *.rockspec /lua/
 
 RUN \
@@ -11,6 +12,7 @@ RUN \
         make \
         ncurses-dev \
         openssl-dev \
+        parallel \
         perl-dev \
         readline-dev \
         zlib-dev \
@@ -30,7 +32,8 @@ RUN \
     && pip install hererocks \
     && cd /lua \
     && chmod a+x install \
-    && ./install \
+    && parallel -a versions ./install \
     && cd / \
+    && chown -R root.users /lua \
     && apk del .build-deps \
-    && rm -f /lua/install /lua/*.rockspec
+    && rm -f /lua/install /lua/versions /lua/*.rockspec

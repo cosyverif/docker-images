@@ -18,7 +18,6 @@ dependencies = {
   "lua >= 5.1",
   "busted",
   "cluacov",
-  "lanes",
   "luacheck",
   "luacov",
   "luacov-coveralls",
