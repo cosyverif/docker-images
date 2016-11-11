@@ -22,6 +22,7 @@ RUN \
         libgcc \
         ncurses \
         openssl \
+        perl \
         readline \
         unzip \
         zip \
