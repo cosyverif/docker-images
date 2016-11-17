@@ -2,7 +2,7 @@
 
 set -e
 
-hererocks ${1}
+hererocks --ignore-checksums ${1}
 parts=(${1})
 target=${parts[3]}
 "${target}/bin/luarocks" make cosy-luax-master-1.rockspec
