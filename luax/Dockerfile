@@ -2,9 +2,9 @@ FROM alpine:edge
 MAINTAINER Alban Linard <alban@linard.fr>
 # MAINTAINER Evan Wies <evan@neomantra.net>
 
-ADD install    /lua/
-ADD versions   /lua/
-ADD *.rockspec /lua/
+ADD luax/install    /lua/
+ADD luax/versions   /lua/
+ADD luax/*.rockspec /lua/
 
 RUN \
     apk add --no-cache --virtual .build-deps \
