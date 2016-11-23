@@ -23,6 +23,6 @@ RUN \
         zip \
         zlib \
     && pip install hererocks \
-    && hererocks --luajit=2.1 --luarocks=^ /usr \
+    && hererocks --luajit=2.1 --luarocks=^ --compat=5.2 /usr \
     && luarocks install luasec \
     && apk del .build-deps
